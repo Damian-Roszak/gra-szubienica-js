@@ -18,8 +18,8 @@
 <?php
 error_reporting(E_ALL);
 echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';
-	//$db = new PDO('mysql:host=mysql1.ugu.pl;dbname=db687831;charset=utf8mb4', 'db687831', 'bW9h9JewycTvfmnq', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-	$db = new PDO('mysql:host=localhost;dbname=ted;charset=utf8mb4', 'root', 'asd', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	//$db = new PDO('mysql:host=server;dbname=db_name;charset=utf8mb4', 'db_name', 'pasword', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	$db = new PDO('mysql:host=localhost;dbname=ted;charset=utf8mb4', 'user', 'haslo', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	$tabela = 'te';
 	$zapytanie = "INSERT INTO $tabela (id, haslo) VALUES ('','".$_POST['haslo']."')";
 	if($_POST['haslo']){
@@ -36,7 +36,7 @@ echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]
 	try {
     $stmt = $db->query($zapytanie3); 
 	} catch(PDOException $ex) {
-    echo " Error się pokazał! ".$ex->getMessage(); 
+    echo " Error się pokazało! ".$ex->getMessage(); 
     }
 	$ile = $stmt->rowCount();
 	$stmt->closeCursor();
