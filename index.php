@@ -26,8 +26,8 @@
 <script>
 var haslo = "<?php
 error_reporting(E_ALL);
-	//$db = new PDO('mysql:host=mysql1.ugu.pl;dbname=db687831;charset=utf8mb4', 'db687831', 'bW9h9JewycTvfmnq', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-	$db = new PDO('mysql:host=localhost;dbname=ted;charset=utf8mb4', 'root', 'asd', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	
+	$db = new PDO('mysql:host=localhost;dbname=ted;charset=utf8mb4', 'lol', 'bol', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	$tabela = 'te';
 	//ile jest rekordów
 	$zapytanie3 = "SELECT * FROM $tabela";
