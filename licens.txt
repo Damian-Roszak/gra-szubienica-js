@@ -1,0 +1,3 @@
+licencja
+
+ten projekt jest na licencjach MIT i GPL
